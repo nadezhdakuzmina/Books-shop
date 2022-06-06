@@ -1,0 +1,76 @@
+{
+  "name": "books-shop",
+  "version": "0.1.0",
+  "description": "Books shop SPA",
+  "scripts": {
+    "start": "webpack-dev-server --mode=development --hot --inline",
+    "build": "webpack --mode=production",
+    "lint": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nadezhdakuzmina/Books-shop.git"
+  },
+  "author": "Kuzmina Nadezhda",
+  "dependencies": {
+    "classnames": "2.2.6",
+    "debounce": "^1.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/runtime": "^7.8.0",
+    "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^3.2.0",
+    "dotenv-webpack": "1.7.0",
+    "eslint": "^6.3.0",
+    "eslint-plugin-react": "^7.30.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "mini-css-extract-plugin": "0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss": "^7.0.18",
+    "postcss-calc": "^7.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-css-variables": "^0.13.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-extend-rule": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-prepend-imports": "^1.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.18.2",
+    "react-svg-loader": "^3.0.3",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "1.1.3",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.1.0",
+    "url-loader": "4.1.0",
+    "webpack": "^4.40.0",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add *.js",
+      "git add *.jsx"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write",
+      "git add *.css"
+    ]
+  }
+}

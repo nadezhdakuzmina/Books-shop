@@ -1,0 +1,58 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.text {
+  font-style: normal;
+  font-size: 14px;
+}
+
+.textLight {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.title {
+  font-style: normal;
+  font-size: 32px;
+  margin: 5px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.button {
+  border: 1px solid #99cb7b;
+  background-color: #98cb7b2f;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,32 @@
+.root {
+  margin-left: 15px;
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 3px);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.icon {
+  margin-left: 5px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.iconActive {
+  transform: rotate(180deg);
+}
+
+.text {
+  font-size: 12px;
+  margin: 3px 7px;
+  padding: 3px 0;
+  border-bottom: 1px solid #ccc;
+}
