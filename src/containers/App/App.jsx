@@ -12,10 +12,18 @@ const App = () => {
   return (
     <Layout>
       <Context.Consumer>
-        {({ isLoaded }) => (isLoaded ? <Header /> : <Loader />)}
+        {({ isLoaded }) =>
+          isLoaded ? (
+            <>
+              <Header />
+              <Filters />
+              <ShopList />
+            </>
+          ) : (
+            <Loader />
+          )
+        }
       </Context.Consumer>
-      <Filters />
-      <ShopList />
     </Layout>
   );
 };

@@ -59,6 +59,10 @@
 }
 
 @media screen and (max-width: 900px) {
+  .listItem {
+    width: calc(100% - 25px);
+  }
+
   .list {
     flex-wrap: nowrap;
     flex-direction: column;

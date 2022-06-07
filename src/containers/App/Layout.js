@@ -8,7 +8,6 @@ import { DEFAULT_BALANCE } from '../../utils/constants';
 import { getCost } from '../../utils/getCost';
 
 const Layout = ({ children }) => {
-  const [isLoaded, setLoaded] = useState(false);
   const [balance, setBalance] = useState(0);
   const [search, setSearch] = useState('');
   const [sortPrice, setSortPrice] = useState('DESC');
@@ -41,10 +40,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     getBooksList(search, sortPrice, categoryId)
-      .then(books => {
-        setLoaded(true);
-        setBooks(books);
-      })
+      .then(books => setBooks(books))
       .catch(() => setHasError(false));
   }, [search, sortPrice, categoryId]);
 
@@ -114,7 +110,7 @@ const Layout = ({ children }) => {
     <Context.Provider
       value={{
         // Данные
-        isLoaded,
+        isLoaded: categoryList && books,
         balance,
         books,
         cart,
