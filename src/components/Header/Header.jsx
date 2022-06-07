@@ -15,7 +15,6 @@ const Header = () => {
   const onClick = () => {
     setIsOpenedCart(!isOpenedCart);
   };
-  console.log(isOpenedCart);
 
   return (
     <>

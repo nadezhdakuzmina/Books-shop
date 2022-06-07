@@ -6,30 +6,36 @@ import End from '../../assets/static/images/Union.svg';
 import * as S from './Cart.css';
 import * as CommonS from '../../assets/styles/index.css';
 
+export const Counter = ({ item }) => {
+  const { onIncrement, onDecrement } = useContext(Context);
+  return (
+    <div className={S.counter}>
+      <button
+        onClick={() => onDecrement(item)}
+        className={classnames(CommonS.button)}
+      >
+        -
+      </button>
+      <span className={S.textCounter}>{item.counter} шт.</span>
+      <button
+        onClick={() => onIncrement(item)}
+        className={classnames(CommonS.button)}
+      >
+        +
+      </button>
+    </div>
+  );
+};
+
 const CartItem = ({ item }) => {
-  // const color = CATEGORY_COLORS[item.category];
-  const { onIncrement, onDecrement, removeFromCart } = useContext(Context);
+  const { removeFromCart } = useContext(Context);
 
   return (
     <li key={item.name}>
       <div className={S.cartItem}>
         <div className={S.cartItemInfo}>
           <span>{item.name}</span>
-          <div className={S.counter}>
-            <button
-              onClick={() => onDecrement(item)}
-              className={classnames(CommonS.button)}
-            >
-              -
-            </button>
-            <span className={S.textCounter}>{item.counter} шт.</span>
-            <button
-              onClick={() => onIncrement(item)}
-              className={classnames(CommonS.button)}
-            >
-              +
-            </button>
-          </div>
+          <Counter item={item} />
           <span>{item.price} руб.</span>
         </div>
         <End onClick={() => removeFromCart(item)} className={S.removeSmall} />

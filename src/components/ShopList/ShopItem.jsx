@@ -2,20 +2,24 @@ import React, { useContext } from 'react';
 
 import { Context } from '../../containers/App';
 import { CATEGORY_COLORS } from '../../utils/constants';
+import { Counter } from '../Cart/CartItem';
 
 import * as S from './ShopList.css';
 
 const ShopItem = ({ item }) => {
-  const { addToCart } = useContext(Context);
+  const { addToCart, cart } = useContext(Context);
 
   const { name, price, coverUrl } = item;
+
+  const cartItem = cart.find(cartItem => cartItem.name === name);
+
+  console.log(cartItem?.counter);
 
   const onAdd = () => {
     addToCart(item);
   };
 
   const color = CATEGORY_COLORS[item.categoryId];
-  console.log(color);
 
   return (
     <li className={S.listItem}>
@@ -32,9 +36,13 @@ const ShopItem = ({ item }) => {
               <span className={S.price}>{price}</span>
               <span>руб.</span>
             </div>
-            <button onClick={onAdd} className={S.button}>
-              В корзину
-            </button>
+            {cartItem?.counter >= 1 ? (
+              <Counter item={cartItem} />
+            ) : (
+              <button onClick={onAdd} className={S.button}>
+                В корзину
+              </button>
+            )}
           </div>
         </div>
       </div>

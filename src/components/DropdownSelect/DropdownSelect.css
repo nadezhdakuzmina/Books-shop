@@ -29,4 +29,9 @@
   margin: 3px 7px;
   padding: 3px 0;
   border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.text:last-child {
+  border-bottom: none;
 }

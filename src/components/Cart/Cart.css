@@ -101,6 +101,12 @@
   margin-top: 15px;
   background-color: #99cb7b;
   color: #fff;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .scrol {
