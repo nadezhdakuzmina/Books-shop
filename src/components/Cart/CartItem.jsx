@@ -1,31 +1,10 @@
 import React, { useContext } from 'react';
-import classnames from 'classnames';
-import { Context } from '../../containers/App';
+
 import End from '../../assets/static/images/Union.svg';
+import Counter from '../Counter';
 
+import { Context } from '../../containers/App';
 import * as S from './Cart.css';
-import * as CommonS from '../../assets/styles/index.css';
-
-export const Counter = ({ item }) => {
-  const { onIncrement, onDecrement } = useContext(Context);
-  return (
-    <div className={S.counter}>
-      <button
-        onClick={() => onDecrement(item)}
-        className={classnames(CommonS.button)}
-      >
-        -
-      </button>
-      <span className={S.textCounter}>{item.counter} шт.</span>
-      <button
-        onClick={() => onIncrement(item)}
-        className={classnames(CommonS.button)}
-      >
-        +
-      </button>
-    </div>
-  );
-};
 
 const CartItem = ({ item }) => {
   const { removeFromCart } = useContext(Context);

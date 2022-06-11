@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 
+import Counter from '../Counter';
+
 import { Context } from '../../containers/App';
 import { CATEGORY_COLORS } from '../../utils/constants';
-import { Counter } from '../Cart/CartItem';
-
 import * as S from './ShopList.css';
 
 const ShopItem = ({ item }) => {

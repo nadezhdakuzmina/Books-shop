@@ -40,7 +40,7 @@
   cursor: pointer;
   border: 0;
   border-radius: 4px;
-  background-color: #99cb7b;
+  background-color: var(--green);
   padding: 5px 10px;
   color: #fff;
 }

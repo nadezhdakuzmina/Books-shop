@@ -34,7 +34,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #99cb7b;
+  border-bottom: 1px solid var(--green);
   padding: 8px;
 }
 
@@ -46,18 +46,6 @@
 
 .balance {
   margin-bottom: 30px;
-}
-
-.counter {
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-  margin: 6px 0;
-}
-
-.textCounter {
-  margin: 4px;
-  font-size: 14px;
 }
 
 .icon {
@@ -84,7 +72,7 @@
 }
 
 .cost {
-  border-top: 1px solid #99cb7b;
+  border-top: 1px solid var(--green);
   padding-top: 30px;
   margin: 0 16px;
   display: flex;
@@ -99,7 +87,7 @@
   font-weight: 600;
   padding: 10px 30px;
   margin-top: 15px;
-  background-color: #99cb7b;
+  background-color: var(--green);
   color: #fff;
   cursor: pointer;
 }

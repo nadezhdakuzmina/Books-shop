@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
 
-import { Context } from '../../containers/App/context';
 import SortIcon from '../../assets/static/images/sort.svg';
 import SearchIcon from '../../assets/static/images/search.svg';
 import DropdownSelect from '../DropdownSelect';
+
+import { Context } from '../../containers/App/context';
 import * as S from './Filters.css';
 import * as CommonS from '../../assets/styles/index.css';
 

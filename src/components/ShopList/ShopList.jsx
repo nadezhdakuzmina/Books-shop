@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
-import { Context } from '../../containers/App';
+
 import List from './List';
+
+import { Context } from '../../containers/App';
 import * as CommonS from '../../assets/styles/index.css';
 
 const ShopList = () => {

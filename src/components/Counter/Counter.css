@@ -1,0 +1,11 @@
+.counter {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  margin: 6px 0;
+}
+
+.textCounter {
+  margin: 4px;
+  font-size: 14px;
+}
